@@ -15,14 +15,14 @@ public class ArrCharOps {
         System.out.println(indexOf(arr1,'l',3)); 
         System.out.println(lastIndexOf(arr1, 'l'));
         System.out.println(concat(arr1, arr2));
-        System.out.println(subArray(arr2, 2, 9));
+        System.out.println(subArray(arr2, 2, 9));*/
         System.out.println(compareTo("abcd", "abcd"));
         System.out.println(compareTo("abc", "abcd"));
         System.out.println(compareTo("abw", "abcd"));
         System.out.println(compareTo("Abcd", "a"));
         System.out.println(compareTo("apple", "banana"));
         System.out.println(compareTo("apple", "applepie"));
-        System.out.println(compareTo("Zoo", "zoo"));*/
+        System.out.println(compareTo("Zoo", "zoo"));
         System.out.println(hashCode(arr1));
         System.out.println(hashCode(arr2));
         System.out.println(hashCode(arr3));
@@ -141,7 +141,9 @@ public class ArrCharOps {
         for (int i = 0; i < arr.length-1; i++) {
             sum+=arr[i]*Math.pow(7,(arr.length-(i+1)));
         }
-        sum+=(arr[arr.length-1]);
+        if((arr.length-1)>=0){
+        sum+=arr[(arr.length-1)];
+        }
         return sum;
     }
 
@@ -185,10 +187,10 @@ public class ArrCharOps {
     }
     if(str1.length()!=str2.length()){
         if(str1.length()==minL){
-            return -1;
+            return 1;
         }
         else{
-            return 1;
+            return -1;
         }
     }
     return -2;
