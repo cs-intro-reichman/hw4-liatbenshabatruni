@@ -47,14 +47,17 @@ public class ArrCharOps {
      *  returns true; Otherwise returns false.
      */
     public static boolean equals(char[] arr1, char[] arr2) {
-        boolean flag = false;
+        boolean flag = true;
         if (arr1.length == arr2.length) {
             for (int i = 0; i < arr1.length; i++) {
-               if (arr1[i]==arr2[i]) {
-                 flag = true;
+               if (arr1[i]!=arr2[i]) {
+                 return false;
                }
             }
-        }  
+        }
+        else{
+            flag=false;
+        }
         return flag;
     }
 
@@ -132,10 +135,14 @@ public class ArrCharOps {
      */
     public static long hashCode(char[] arr) {
         int sum=0;
-        for (int i = 0; i < arr.length; i++) {
+        if (arr == null){
+            return 0;
+        }
+        for (int i = 0; i < arr.length-1; i++) {
             sum+=Math.pow((arr[i]*7),(arr.length-(i+1)));
             
         }
+        sum+=arr[arr.length-1];
         return sum;
     }
 
@@ -165,13 +172,16 @@ public class ArrCharOps {
      *         return -2 if there is an error with the input.
      */
     public static int compareTo(String str1, String str2) {
+    if (str1.equals(str2)){
+        return 0;
+    }
     int minL = Math.min((str1.length()), str2.length());
     for (int i=0;i<minL;i++){
         if (str1.charAt(i)<str2.charAt(i)){
             return -1;
         }
         if(str1.charAt(i)>str2.charAt(i)){
-            return -2;
+            return 1;
         }
     }
     if(str1.length()!=str2.length()){
@@ -179,9 +189,9 @@ public class ArrCharOps {
             return -1;
         }
         else{
-            return -2;
+            return 1;
         }
     }
-    return 0;
+    return -2;
     }
 }
