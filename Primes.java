@@ -30,6 +30,7 @@ public class Primes {
             }
         index=p+1;
         }
+        System.out.println("Prime numbers up to "+n+":");   
         int counter = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i]==true){
