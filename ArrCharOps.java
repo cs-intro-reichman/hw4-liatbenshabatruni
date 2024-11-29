@@ -23,9 +23,9 @@ public class ArrCharOps {
         System.out.println(compareTo("apple", "banana"));
         System.out.println(compareTo("apple", "applepie"));
         System.out.println(compareTo("Zoo", "zoo"));
-        System.out.println(hashCode(arr1));
-        System.out.println(hashCode(arr2));
-        System.out.println(hashCode(arr3));
+        //System.out.println(hashCode(arr1));
+        //System.out.println(hashCode(arr2));
+        //System.out.println(hashCode(arr3));
     }
 
     /** Prints the given array of characters, and moves the cursor to the next line.
@@ -187,10 +187,10 @@ public class ArrCharOps {
     }
     if(str1.length()!=str2.length()){
         if(str1.length()==minL){
-            return 1;
+            return -1;
         }
         else{
-            return -1;
+            return 1;
         }
     }
     return -2;
