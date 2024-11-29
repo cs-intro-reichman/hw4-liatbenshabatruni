@@ -7,11 +7,11 @@ public class ArrCharOps {
         String str = "clearly";
         char[] arr1 = {'c','l','e','a','r','l','y'};
         char[] arr2 = {'U','n','d','e','r','s','t', 'o', 'o', 'd'};
-        char [] arr3 = {'L','I','A','T'};
+        char [] arr3 = {'G','F','G'};
         //System.out.println(str);  // Prints the string
         //println(arr1);            // Prints an array of characters
         //System.out.println(charAt(arr1,2));      
-        System.out.println(indexOf(arr1,'l'));  
+        /*System.out.println(indexOf(arr1,'l'));  
         System.out.println(indexOf(arr1,'l',3)); 
         System.out.println(lastIndexOf(arr1, 'l'));
         System.out.println(concat(arr1, arr2));
@@ -22,7 +22,7 @@ public class ArrCharOps {
         System.out.println(compareTo("Abcd", "a"));
         System.out.println(compareTo("apple", "banana"));
         System.out.println(compareTo("apple", "applepie"));
-        System.out.println(compareTo("Zoo", "zoo"));
+        System.out.println(compareTo("Zoo", "zoo"));*/
         System.out.println(hashCode(arr1));
         System.out.println(hashCode(arr2));
         System.out.println(hashCode(arr3));
@@ -139,10 +139,9 @@ public class ArrCharOps {
             return 0;
         }
         for (int i = 0; i < arr.length-1; i++) {
-            sum+=Math.pow((arr[i]*7),(arr.length-(i+1)));
-            
+            sum+=arr[i]*Math.pow(7,(arr.length-(i+1)));
         }
-        sum+=arr[arr.length-1];
+        sum+=(arr[arr.length-1]);
         return sum;
     }
 
