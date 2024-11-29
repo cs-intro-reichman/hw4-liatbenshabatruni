@@ -176,9 +176,9 @@ public class ArrCharOps {
     if (str1.equals(str2)){
         return 0;
     }
-    if (str1.isEmpty()|| str2.isEmpty()){
-        return -2;
-    }
+    //if (str1.isEmpty()|| str2.isEmpty()){
+    //    return -2;
+    //}
     int minL = Math.min((str1.length()), str2.length());
     for (int i=0;i<minL;i++){
         if (str1.charAt(i)<str2.charAt(i)){
