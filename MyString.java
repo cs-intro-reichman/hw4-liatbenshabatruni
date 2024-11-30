@@ -35,6 +35,9 @@ public class MyString {
     public static boolean contains(String str1, String str2) {
         int i = 0;
         int j = 0;
+        if (str1.length()==0 || str2.length()==0){
+            return false;
+        }
         if (str1.equals(str2)){
             return true;
         }
